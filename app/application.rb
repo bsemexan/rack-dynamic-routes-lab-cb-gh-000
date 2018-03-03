@@ -14,5 +14,6 @@ class Application < Item
       end
     else
       resp.status = 404
+    end
   end
 end
