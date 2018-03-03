@@ -5,6 +5,7 @@ class Application < Item
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
+      item_name = req.path.split("/items/").last
       @@item.each do |item|
         if @@item.include?(item)
           resp.write "#{item}"
