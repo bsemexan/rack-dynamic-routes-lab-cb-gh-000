@@ -6,7 +6,7 @@ class Application < Item
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      is_item = @@item.find{|s| s.title == song_title}
+      is_item = @@item.find{|s| s.name == item_name}
       @@item.each do |item|
         if @@item.include?(item)
           resp.write "#{item}"
