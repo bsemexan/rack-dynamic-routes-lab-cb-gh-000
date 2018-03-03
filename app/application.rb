@@ -1,2 +1,2 @@
-class Application
+class Application < Item
 end
